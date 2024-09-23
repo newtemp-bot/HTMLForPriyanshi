@@ -1,60 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form All property</title>
-</head>
-<body>
-    <form>
-        
-        <!-- For In label -->
-         <label for="testuname">username</label>
-        <label for="pass">password</label>
-        <input type="password" name="pass" id="pass" value="asdfasdf"/>
-        <input type="text" name="uname" id="testuname" value="asdfasdfsadfasdf"/> 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form All property</title>
+    </head>
+    <body>
+        <form action="NewPage.html" autocomplete="off" method="get" enctype='multipart/form-data' ><!-- novalidate -->
+            <!-- For In label -->
+            <label for="testuname"  >username</label>
+            <label for="pass">password</label>
+            <input type="password" name="pass" id="pass" pattern="[0-9]{8,}"  required  title="Please add username"/>
+            <input
+            readonly
+            size="50"
+                type="text"
+                name="uname"
+                id="testuname"
+                value="asdfasdfsadfasdf"
+            />
 
-        <!-- Type of form inputs -->
-        <input type="button" value="button">
-        <input type="submit" value="submit">
-        <input type="reset" value="reset">
-        <input type="image" src="../Day6/src/images/smiley.gif" />Click To submit
+            <!-- Type of form inputs -->
+            <input type="button"  value="button" disabled />
+            <input type="submit" value="submit"   />
+            <input type="reset" value="reset" disabled  />
+            <input type="image" src="../Day6/src/images/smiley.gif" />Click To
+            submit
 
-        <input type="color" value="#c8d5e9">
-        <input type="date">
-        <input type="datetime-local">
-        <input type="email">
-        <input type="hidden" value="215421">
-        <input type="file">
-        
-        <h2>List of Courses</h2>
-        <input id="bca" name="courses" value="bca" type="checkbox">
-        <label for="bca">BCA</label>
-        <input id="mca" name="courses" value="mca" type="checkbox">
-        <label for="mca">MCA</label>
-        <input id="bcom" name="courses" value="bcom" type="checkbox">
-        <label for="bcom">BCOM</label>
-        <input id="mcom" name="courses" value="mcom" type="checkbox">
-        <label for="mcom">MCOM</label>
+            <fieldset>
+                <legend>Boys</legend>
+                <input type="color" value="#c8d5e9" />
+                <input type="date" min="2024-09-15" max="2024-09-24"/>
+                <input type="datetime-local" />
+                <input type="email" />
+                <input type="hidden" value="215421" />
+                <input type="file" multiple/>
+            </fieldset>
 
-        <h2>List of Gender</h2>
-        <input id="male" name="gender" value="m" type="radio">
-        <label for="male">male</label>
-        <input id="female" name="gender"  value="f" type="radio">
-        <label for="female">female</label>
-        <input id="other" name="gender"  value="o" type="radio">
-        <label for="other">other</label>
+            <h2>List of Courses</h2>
+            <input id="bca" name="courses" value="bca" type="checkbox" />
+            <label for="bca">BCA</label>
+            <input id="mca" name="courses" value="mca" type="checkbox" />
+            <label for="mca">MCA</label>
+            <input id="bcom" name="courses" value="bcom" type="checkbox" />
+            <label for="bcom">BCOM</label>
+            <input id="mcom" name="courses" value="mcom" type="checkbox" />
+            <label for="mcom">MCOM</label>
 
-        <input type="month">
-        <input type="number">
-        <input type="range">
-        <input type="search">
-        <input type="tel">
-        <input type="time">
-        <input type="url">
-        <input type="week">
+            <h2>List of Gender</h2>
+            <input id="male" name="gender" value="m" type="radio" />
+            <label for="male">male</label>
+            <input id="female" name="gender" value="f" type="radio" />
+            <label for="female">female</label>
+            <input id="other" name="gender" value="o" type="radio" />
+            <label for="other">other</label>
 
+            <input type="month" />
+            <input type="number" min="5" max="10" step="3" title="Hello"/>
+            <input type="range" min="5" max="10" />
+            <input type="search" autofocus  />
+            <input type="tel" />
+            <input type="time" />
+            <input type="url" />
+            <input type="week" />
 
-    </form>
-</body>
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars" size="3" multiple>
+                <option value="H1">H1</option>
+                <option value="BMW">BMW</option>
+                <option selected value="HII">HII</option>
+                <option value="ODDI">ODDI</option>
+                <option value="NEW">NEW</option>
+            </select>
+
+            <textarea name="test"  placeholder="Hello" maxlength="5" id="test" rows="5" cols="150"></textarea>
+
+            <input type="search" list="brow" />
+            <datalist id="brow">
+                <option value="Edge"></option>
+                <option value="Firefox"></option>
+                <option value="Chrome"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+            </datalist>
+        </form>
+    </body>
 </html>
